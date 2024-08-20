@@ -14,3 +14,4 @@ print(dadosFormatados)
 # PARA INSTALAR O PANDAS E O SCIPY DIGITE NO TERMINAL:
 # pip download pandas 
 # pip download scipy
+# teste
