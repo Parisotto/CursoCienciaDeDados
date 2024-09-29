@@ -17,3 +17,5 @@ print(f"Nome: {nome}", end=" - ")
 print(f"Idade: {idade}", end=" ")
 print(f"Altura: {altura:.2f}")
 
+sobrenome = "Edson\nLuiz\nParisotto"
+print(sobrenome)

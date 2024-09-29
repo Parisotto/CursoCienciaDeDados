@@ -1,6 +1,7 @@
 # if()
 
 habilitado = True
+idade = 20
 print(habilitado and idade >= 18)
 
 media = float(input("Digite sua média: "))
@@ -12,4 +13,3 @@ elif media >= 4:
     print("Trabalho de Recuperção")
 else:
     print("Reprovado")
-

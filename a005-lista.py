@@ -23,7 +23,7 @@ listaVazia.append(1) # adiciona um elemento
 listaVazia.append(2) # adiciona um elemento
 listaVazia.append(3) # adiciona um elemento
 
-listaVazia.insert(2, 2) # insere elemento 2 no índice 2
+listaVazia.insert(7, 2) # insere elemento 7 no índice 2
 listaVazia.remove(2) # remove o primeiro elemento 2 da lista
 listaVazia.pop(0) # remove e retorna o elemento no índice 0
 listaVazia.index(2) # retorna o ídice da primeira ocorrencia do elemento
