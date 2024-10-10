@@ -31,4 +31,35 @@ print(tupla.index(3.14))
 print(tupla_direta.count("Edson"))
 
 string = "Parisotto"
-print(tuple(string))
+print(tuple(string))  # transforma uma string em uma tupla
+
+print()
+livro = tuple(["Fundação", "Isaac Asimov", "1949"])  # transforna uma lista em tupla
+for i in livro:
+    print(i)
+
+filme1 = ("Duna", "2020")
+filme2 = ("Blade Runner", "1990")
+filmes = [filme1, filme2]
+
+print()
+for filme in filmes:
+    titulo, ano = filme
+    print(f"Filme: {titulo}\nAno: {ano}\n")
+
+for filme in filmes:
+    print(filme)
+
+print()
+materias = ("Matemática", "Física", "História", "Português")
+for materia in materias:
+    print(materia)
+
+print()
+for indice, materia in enumerate(materias):
+    print(f"Índice: {indice}, Matéria: {materia}")
+
+print()
+print(materias)
+for materia in materias:
+    print(materia)
