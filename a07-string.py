@@ -26,3 +26,6 @@ print(mensagem.upper())
 print(mensagem.lower())
 print(mensagem.replace("o ar", "a atmosfera"))
 print(" Hoje em dia.  ".replace(" ", ""))
+
+lista = mensagem.split()
+print(lista)
