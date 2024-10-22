@@ -64,7 +64,7 @@ def par_ou_impar():
         escolha = input("Escolha 'par' ou 'ímpar': ").lower()
         # Verifica se a escolha é válida
         if escolha not in ['par', 'ímpar']:
-            print("Escolha inválida. Escolha 'par' ou 'ímpar'.")
+            print("Escolha inválida!")
         else:
             break
 
@@ -125,29 +125,56 @@ def verificar_exclusao(valores):
 
     return excluido
 
-def disputa():
+
+def dois_ou_um():
     jogadores = recolher_nomes()
 
     while len(jogadores) > 2:
         valores = sortear_valores(jogadores)
         print("\nResultado da rodada:")
         for jogador, valor in valores.items():
-            print(f"{jogador}: {valor}")
+            print(f"{valor} {jogador}")
 
         excluido = verificar_exclusao(valores)
 
         if excluido:
-            print(f"\nJogador excluído nesta rodada: {excluido}")
+            print(f"\n{excluido} foi excluído(a) nesta rodada.")
             jogadores.remove(excluido)
         else:
             print("\nNenhum jogador foi excluído nesta rodada.")
 
-        input("\nPressione Enter para continuar para a próxima rodada...")
-        print()
+        if len(jogadores) == 2:
+            print("\nFINAL! Disputa de Par ou Ímpar:")
+            print(f"{jogadores[0]} e {jogadores[1]}")
 
-    print("\nJogadores restantes:")
-    for jogador in jogadores:
-        print(jogador)
+        print(input("\nPressione Enter para continuar..."))
+
+    # Disputa de Par ou Ímpar
+    n1 = random.randint(0, 5)
+    n2 = random.randint(0, 5)
+    print(f"PAR: {jogadores[0]}, lançou {n1} dedos")
+    print(f"ÍMPAR: {jogadores[1]}, lançou {n2} dedos")
+    soma = n1 + n2
+    if soma % 2 == 0:
+        print(f"\n{soma} é PAR! {jogadores[0]} ganhou a final!")
+    else:
+        print(f"{soma} é ÍMPAR! {jogadores[1]} ganhou a final!")
 
 # Chama a função para iniciar a disputa
-disputa()
+# dois_ou_um()
+
+
+
+# EXECUÇÃO DOS EXERCÍCIOS
+
+# 1. CARA OU COROA
+# jogar_moeda()
+
+# 2. JOGO DE DADOS
+# jogar_dados()
+
+# 3. PAR OU ÍMPAR
+# par_ou_impar()
+
+# 4. DOIS OU UM
+dois_ou_um()
