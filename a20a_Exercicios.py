@@ -1,4 +1,22 @@
 import random
+from time import sleep
+
+# 0. ADVINHE O NÚMERO
+# Escreva um função que faça oo computador escolher um número inteiro entre 1 e 5 e peça ao usuário tentar descobrir qual número foi escolhido pelo computador. O programa deverá escrever no terminal se o usuário acertou ou errou a adivinhação.
+def adivinha():
+    numero = random.randint(1, 5)
+    print("Vou escolher um número entre 1 e 5. Tente adivinhar!")
+    print("-=-" * 20)
+    adivinha = int(input("Qual número escolhi?: "))
+    print("PROCESSANDO...")
+    sleep(3)
+    if adivinha == numero:
+        print("Que legal! Você adivinhou!")
+    else:
+        print(f"Xi! Não deu... Eu escolhi {numero}.")
+
+# chama a função adivinha() para executar o jogo
+adivinha()
 
 # 1. CARA OU COROA
 # Faça uma função que a pessoa digite c para escolher cara ou k para escolher coroa. Simule o lançamento de uma moeda que resulte em cara (c) ou coroa (k) e diga se a pessoa errou ou acertou na escolha.
@@ -22,7 +40,7 @@ def jogar_moeda():
     else:
         print(f"Você errou. A moeda resultou em {moeda.upper()}. Sua escolha foi {escolha.upper()}.")
 
-# Chama a função para executar o jogo
+# Chama a função jogar_moeda() para executar o jogo
 # jogar_moeda()
 
 
@@ -53,7 +71,7 @@ def jogar_dados():
         print(
             f"Você errou. Os dados resultaram em {dado1} e {dado2}, somando {soma_dados}. Sua escolha foi {escolha}.")
 
-# Chama a função para executar o jogo
+# Chama a função jogar_dados() para executar o jogo
 # jogar_dados()
 
 # 3. PAR OU ÍMPAR
@@ -90,7 +108,7 @@ def par_ou_impar():
     else:
         print(f"Deu {resultado}! Você perdeu! O computador ganhou.")
 
-# Chama a função para executar o jogo
+# Chama a função par_ou_impar() para executar o jogo
 # par_ou_impar()
 
 '''
@@ -160,7 +178,7 @@ def dois_ou_um():
     else:
         print(f"{soma} é ÍMPAR! {jogadores[1]} ganhou a final!")
 
-# Chama a função para iniciar a disputa
+# Chama a função dois_ou_um() para iniciar a disputa
 # dois_ou_um()
 
 
