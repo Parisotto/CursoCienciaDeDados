@@ -177,4 +177,4 @@ def dois_ou_um():
 # par_ou_impar()
 
 # 4. DOIS OU UM
-dois_ou_um()
+# dois_ou_um()
