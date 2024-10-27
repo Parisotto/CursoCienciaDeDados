@@ -1,3 +1,4 @@
+# Para instalar o pygame: no terminal digite: pip install pygame
 import random, pygame
 
 pygame.init()

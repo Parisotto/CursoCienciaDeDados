@@ -4,6 +4,8 @@
 conjunto = {1, 2, 3, 3, 4, 5, 6, 7, 5, 4}
 print(conjunto)
 
+conjuntoVazio = set()
+
 conjunto.add(9)
 conjunto.remove(3)
 print(conjunto)

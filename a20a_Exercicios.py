@@ -16,7 +16,7 @@ def adivinha():
         print(f"Xi! Não deu... Eu escolhi {numero}.")
 
 # chama a função adivinha() para executar o jogo
-adivinha()
+# adivinha()
 
 # 1. CARA OU COROA
 # Faça uma função que a pessoa digite c para escolher cara ou k para escolher coroa. Simule o lançamento de uma moeda que resulte em cara (c) ou coroa (k) e diga se a pessoa errou ou acertou na escolha.
@@ -184,6 +184,9 @@ def dois_ou_um():
 
 
 # EXECUÇÃO DOS EXERCÍCIOS
+
+# 0. ADVINHE O NÚMERO
+# adivinha()
 
 # 1. CARA OU COROA
 # jogar_moeda()
