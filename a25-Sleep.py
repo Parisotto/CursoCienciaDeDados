@@ -32,12 +32,13 @@ def contagem_regressiva():
     print("-" * 29)
 
 def titulo(titulo):
+    print()
     print("=" * (len(titulo) + 2))
-    print(f" {titulo}")
+    print(f" {titulo.upper()}")
     print("=" * (len(titulo) + 2))
 
 def main():
-    titulo("SORTEIO")
+    titulo("Sorteio")
 
     nomes = ["Edson", "Sandra", "Tales", "Sofia", "Tamires"]
     contador = 1

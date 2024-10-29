@@ -1,4 +1,4 @@
-# Cores e estilos no termina.
+# Cores e estilos no terminal.
 # STYLE         TEXT    BACK    COR
 # 0 Nenhum      30      40      Branco
 # 1 Negrito     31      41      Vermelho

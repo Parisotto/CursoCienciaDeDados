@@ -1,8 +1,9 @@
 from time import sleep
 
 def titulo(titulo):
+    print()
     print("=" * (len(titulo) + 2))
-    print(f" {titulo}")
+    print(f" {titulo.upper()}")
     print("=" * (len(titulo) + 2))
 
 def pa_pg(termo, termos, progressao, razao):

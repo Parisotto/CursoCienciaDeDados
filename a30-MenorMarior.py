@@ -1,7 +1,4 @@
-def titulo(titulo):
-    print("=" * (len(titulo) + 2))
-    print(f" {titulo}")
-    print("=" * (len(titulo) + 2))
+from uteis.utilitarios import titulo
 
 def menor_maior(numeros):
     # print(f"\n{numeros}")

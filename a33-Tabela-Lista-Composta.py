@@ -1,10 +1,5 @@
 from time import sleep
-
-def titulo(titulo):
-    print()
-    print("=" * (len(titulo) + 2))
-    print(f" {titulo.upper()}")
-    print("=" * (len(titulo) + 2))
+from uteis.utilitarios import titulo
 
 def tabela(planilha):
     print()
@@ -65,7 +60,7 @@ def main():
         planilha.append([nome, [atividades, trabalho, prova], media])
 
         continuar = str(input("\nContinuar? [s/n]: "))
-        if continuar not in "Sn":
+        if continuar not in "Ss":
             break
 
     tabela(planilha)

@@ -1,4 +1,5 @@
 from time import sleep
+from uteis.utilitarios import titulo
 
 def fibonacci(termos):
     t1 = 0
@@ -15,10 +16,6 @@ def fibonacci(termos):
         t2 = soma
         termos -= 1
 
-def titulo(titulo):
-    print("=" * (len(titulo) + 2))
-    print(f" {titulo}")
-    print("=" * (len(titulo) + 2))
 
 def main():
     titulo("SEQUÊNCIA DE FIBONACCI")
@@ -29,4 +26,15 @@ def main():
     print("\nEncerrando.")
     sleep(1)
 
-main()
+# main()
+# help(titulo)
+
+def fiboRecursivo(n):
+    if n == 1:
+        return 0
+    elif n == 2:
+        return 1
+    else:
+        return fiboRecursivo(n-1) + fiboRecursivo(n-2)
+
+print(fiboRecursivo(5))

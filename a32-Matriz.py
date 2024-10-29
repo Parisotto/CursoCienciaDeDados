@@ -1,4 +1,5 @@
 from random import choice
+from uteis.utilitarios import titulo
 
 matriz = [
     [0, 0, 0],
@@ -32,12 +33,6 @@ def montaMatriz(linhas, colunas):
         l += 1
 
     print("]")
-
-def titulo(titulo):
-    print()
-    print("=" * (len(titulo) + 2))
-    print(f" {titulo.upper()}")
-    print("=" * (len(titulo) + 2))
 
 def main():
     titulo("Matrizes")

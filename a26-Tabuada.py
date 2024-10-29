@@ -7,8 +7,9 @@ def tabuada(tabuada):
         sleep(1)
 
 def titulo(titulo):
+    print()
     print("=" * (len(titulo) + 2))
-    print(f" {titulo}")
+    print(f" {titulo.upper()}")
     print("=" * (len(titulo) + 2))
 
 def main():
@@ -21,7 +22,7 @@ def main():
         except ValueError:
             print("Entrada inválida!")
 
-    titulo(f"TABUADA DO {tab}")
+    titulo(f"Tabuada do {tab}")
     tabuada(tab)
 
 main()

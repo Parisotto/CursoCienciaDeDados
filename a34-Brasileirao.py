@@ -1,21 +1,26 @@
 from time import sleep
-
-def titulo(titulo):
-    print()
-    print("=" * (len(titulo) + 2))
-    print(f" {titulo.upper()}")
-    print("=" * (len(titulo) + 2))
+from uteis.utilitarios import titulo
+from uteis.utilitarios import cores
 
 def brasileirao(tabela):
-    print()
+    print(f"{cores['t-azul']}")
     print("=" * 43)
     print(" " * 14, end="")
     print("BRASILEIRÃO 2024")
-    print("=" * 43)
+    print("=" * 43, end='')
+    print(f"{cores['limpa']}")
+
     print(f"{'POSIÇÃO'}{'P':>3} {'J':>3} {'V':>3} "
           f"{'E':>3} {'D':>3} {'GP':>3} {'GC':>3} "
           f"{'SG':>3} {'%':>3} ")
     print("-" * 43)
+
+    # cores
+    cinza = cores['f-cinza']
+    bold = cores['t-bold']
+    limpa = cores['limpa']
+    verde = cores['t-verde']
+    vermelho = cores['t-vermelho']
 
     ataque = 0
     melhor_ataque = []
@@ -50,38 +55,46 @@ def brasileirao(tabela):
             melhor_defesa.append(times['time'])
 
         sleep(1)
-        print(f"{indice + 1:2} {time} {pontos:3} {jogos:3} "
-              f"{v:3} {e:3} {d:3} {gp:3} {gc:3} {saldo:3} "
-              f"{aproveitamento:3} ")
+        print(f"{indice + 1:2} {time} {cinza}{bold}"
+              f"{pontos:3} {limpa}{jogos:3} "
+              f"{cinza}{v:3} {limpa}{e:3} "
+              f"{cinza}{d:3} {limpa}{gp:3} "
+              f"{cinza}{gc:3} {limpa}{saldo:3} "
+              f"{cinza}{aproveitamento:3} {limpa}")
 
     print("-" * 43)
 
     sleep(1)
-    if len(melhor_ataque) == 1:
-        print(f"\nMELHOR ATAQUE:")
-        print(f"O {melhor_ataque[0]} tem o melhor "
-              f"ataque do campeonato\ncom {ataque} gols marcados.")
-    elif len(melhor_ataque) > 1:
-        print(f"\nMELHOR ATAQUE:")
-        print(f"O", end=" ")
-        for time in melhor_ataque:
-            print(time, end=", o ")
-        print(f"\b"*4, end=" ")
-        print(f"tem o melhor ataque\ndo campeonato com {ataque} "
-              f"gols marcados cada um.")
+    if len(melhor_ataque) > 0:
+        print(f"\n{vermelho}MELHOR ATAQUE:{limpa}")
+        sleep(1)
+        if len(melhor_ataque) == 1:
+            print(f"O {bold}{verde}{melhor_ataque[0]}{limpa} "
+                  f"tem o melhor ataque do campeonato"
+                  f"\ncom {bold}{verde}{ataque}{limpa} gols marcados.")
+        elif len(melhor_ataque) > 1:
+            print(f"O", end=" ")
+            for time in melhor_ataque:
+                print(f"{bold}{verde}{time}{limpa}", end=" e o ")
+            print(f"\b"*5, end=" ")
+            print(f"tem o melhor ataque\ndo campeonato com "
+                  f"{bold}{verde}{ataque}{limpa} gols marcados cada um.")
 
-    if len(melhor_defesa) == 1:
-        print(f"\nMELHOR DEFESA:")
-        print(f"O {melhor_defesa[0]} tem a melhor "
-              f"defesa do campeonato\ncom {defesa} gols sofridos.")
-    elif len(melhor_defesa) > 1:
-        print(f"\nMELHOR DEFESA:")
-        print(f"O", end=" ")
-        for time in melhor_defesa:
-            print(time, end=", o ")
-        print(f"\b"*4, end=" ")
-        print(f"tem a melhor defesa\ndo campeonato com {defesa} "
-              f"gols sofridos cada um.")
+    sleep(1)
+    if len(melhor_defesa) > 0:
+        print(f"\n{vermelho}MELHOR DEFESA:{limpa}")
+        sleep(1)
+        if len(melhor_defesa) == 1:
+            print(f"O {bold}{verde}{melhor_defesa[0]}{limpa} "
+                  f"tem a melhor defesa do campeonato"
+                  f"\ncom {bold}{verde}{defesa}{limpa} gols sofridos.")
+        elif len(melhor_defesa) > 1:
+            print(f"O", end=" ")
+            for time in melhor_defesa:
+                print(f"{bold}{verde}{time}{limpa}", end=" e o ")
+            print(f"\b"*5, end=" ")
+            print(f"tem a melhor defesa\ndo campeonato com "
+                  f"{bold}{verde}{defesa}{limpa} gols sofridos cada um.")
 
 def main():
     titulo("Campeonato Brasileiro 2024")
@@ -93,7 +106,8 @@ def main():
     while True:
         times.clear()
         i += 1
-        print(f"\n      Cadastrar Time {i}")
+        print(f" " * 6, end='')
+        print(f"Cadastrar Time {i}")
         print("-" * 28)
         time = input("Time: ").title().strip()
         if time == "": break
@@ -118,9 +132,11 @@ def main():
 
         times['gols_marcados'] = int(input("Gols marcados: "))
         times['gols_sofridos'] = int(input("Gols sofridos: "))
+        print()
 
         tabela.append(times.copy())
 
     brasileirao(tabela)
+    sleep(1)
 
 main()
