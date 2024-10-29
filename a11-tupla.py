@@ -10,6 +10,15 @@ tupla_simples = (27,)
 print(tupla[1])
 print(tupla[3])
 
+
+print()
+for elemento in tupla:
+    print(f"1 Elemento: {elemento}")
+
+print()
+for elemento in range(0, len(tupla)):
+    print(f"2 Elemento: {tupla[elemento]} na posição {elemento}")
+
 print()
 for indice, elemento in enumerate(tupla):
     print(f"{indice}: {elemento}")

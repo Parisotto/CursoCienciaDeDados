@@ -36,7 +36,12 @@ def main():
             if chances == 0: exit()
 
     retorno = menor_maior(numeros)
-    print(f"O menor número é {retorno[0]} e o maior é {retorno[1]}")
+    print(f"\nO menor número é {retorno[0]} e o maior é {retorno[1]}")
     print(f"A média entre os valores {numeros} é {int(retorno[2])}.")
+
+    # Em uma tupla
+    tupla = tuple(numeros)
+    print(f"\nEM TUPLAS:")
+    print(f"O menor valor na tupla é {min(numeros)} e o maior é {max(numeros)}")
 
 main()
