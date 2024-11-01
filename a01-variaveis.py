@@ -31,3 +31,12 @@ print(salario) # 750
 print(aumento) # True
 print(média) # 7.5
 print(soma) # (7, 5)
+
+variavel_global = 7
+def muda_variavel():
+    global variavel_global
+    variavel_global = 9
+
+print(variavel_global)
+muda_variavel()
+print(variavel_global)

@@ -7,9 +7,9 @@ def dividir(a, b):
     else: 
         print("Impossivel dividir por 0")
     
-a = input("SEM TRY - Digite o dividendo: ")
-b = input("SEM TRY - Digite o dividor: ")
-dividir(a, b)
+#a = input("SEM TRY - Digite o dividendo: ")
+#b = input("SEM TRY - Digite o dividor: ")
+#dividir(a, b)
 
 def dividirComTry():
     try:
@@ -21,6 +21,8 @@ def dividirComTry():
         print("Você não digitou um número válido.")
     except ZeroDivisionError:
         print("Impossível dividir por 0")
+    except:
+        print("\nExceção Genérica")
     else:
         print("Nenhum erro ocorreu.")
     finally:

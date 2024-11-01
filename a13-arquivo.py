@@ -15,7 +15,7 @@ with open('outro-arquivo.txt', 'w') as arquivo:
 arquivo = open('mais-um-arquivo.txt', 'w')
 arquivo.write(texto + "\n")
 arquivo.write("Outra linha" + "\n")
-arquivo.write("Finalizei o  texto." + "\n")
+arquivo.write("Finalizei o texto." + "\n")
 arquivo.close()
 
 # ABRINDO E LENDO ARQUIVOS
@@ -27,9 +27,9 @@ with open('arquivo.txt', 'r') as arquivo:
     for linha in arquivo:
         print(linha)
 
-conteudo = open('arquivoteste.txt', 'r')
-print(conteudo.read())
-conteudo.close()
+#conteudo = open('arquivoteste.txt', 'r')
+#print(conteudo.read())
+#conteudo.close()
 
 lista = []
 with open('arquivo.txt', 'r') as arquivo:

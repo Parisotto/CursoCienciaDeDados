@@ -17,7 +17,10 @@ def tabela(planilha):
 
     while True:
         try:
-            aluno = int(input("\nVer notas do aluno número: "))
+            aluno =input("\nVer notas do aluno número: ")
+            if aluno.isnumeric():
+                aluno = int(aluno)
+
             if aluno > len(planilha): raise ValueError
 
             print()

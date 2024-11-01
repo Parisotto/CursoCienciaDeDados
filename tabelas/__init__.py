@@ -1,8 +1,85 @@
 from time import sleep
-# from uteis.utilitarios import titulo
-# from uteis.utilitarios import cores
-# import uteis.utilitarios as ut
 import util as ut
+import json
+import os
+
+def cria_menu(menu):
+    print()
+    print("MENU:")
+    for valor in menu:
+        print(f"{valor}")
+
+def ver_opc(opc):
+    try:
+        if opc == 1:
+            exit()
+        elif opc == 2:
+            return True
+        else:
+            return False
+    except Exception as e:
+        exit()
+
+
+def arquivo(nome, linhas='', add=False):
+    tipo = 'w' if linhas else 'r'
+    try:
+        if add and linhas and os.path.exists(nome):
+            dados = ""
+            with open(nome, 'r', encoding='utf-8') as arquivo:
+                dados = json.load(arquivo)
+
+            with open(nome, 'w', encoding='utf-8') as arquivo:
+                dados.extend(linhas)
+                json.dump(dados, arquivo, ensure_ascii=False, indent=4)
+        elif linhas:
+            with open(nome, 'w', encoding='utf-8') as arquivo:
+                json.dump(linhas, arquivo, ensure_ascii=False, indent=4)
+
+        with open(nome, 'r', encoding='utf-8') as arquivo:
+            return json.load(arquivo)
+
+    except Exception as e:
+        print(f"Ocorreu um erro: {e}")
+        return False
+
+def registros():
+    tabela = []
+    times = {}
+    i = 0
+    while True:
+        times.clear()
+        i += 1
+        print(f" " * 6, end='')
+        print(f"Cadastrar Time {i}")
+        print("-" * 28)
+        time = input("Time: ").title().strip()
+        if time == "": break
+        times['time'] = time
+
+        while True:
+            jogos = int(input("Jogos: "))
+            vitorias = int(input("Vitórias: "))
+            empates = int(input("Empates: "))
+            derrotas = int(input("Derrotas: "))
+
+            total = vitorias + empates + derrotas
+            if total != jogos:
+                print(f"A soma de vitorias, empates e derrotas ({total}) "
+                      f"é diferente do total de jogos ({jogos})")
+                continue
+
+            times['vitorias'] = vitorias
+            times['empates'] = empates
+            times['derrotas'] = derrotas
+            break
+
+        times['gols_marcados'] = int(input("Gols marcados: "))
+        times['gols_sofridos'] = int(input("Gols sofridos: "))
+        print()
+
+        tabela.append(times.copy())
+    return tabela
 
 
 def brasileirao(tabela):
@@ -98,48 +175,3 @@ def brasileirao(tabela):
             print(f"\b"*5, end=" ")
             print(f"tem a melhor defesa\ndo campeonato com "
                   f"{bold}{verde}{defesa}{limpa} gols sofridos cada um.")
-
-def main():
-    ut.titulo("Campeonato Brasileiro 2024")
-
-    tabela = []
-    times = {}
-
-    i = 0
-    while True:
-        times.clear()
-        i += 1
-        print(f" " * 6, end='')
-        print(f"Cadastrar Time {i}")
-        print("-" * 28)
-        time = input("Time: ").title().strip()
-        if time == "": break
-        times['time'] = time
-
-        while True:
-            jogos = int(input("Jogos: "))
-            vitorias = int(input("Vitórias: "))
-            empates = int(input("Empates: "))
-            derrotas = int(input("Derrotas: "))
-
-            total = vitorias + empates + derrotas
-            if total != jogos:
-                print(f"A soma de vitorias, empates e derrotas ({total}) "
-                      f"é diferente do total de jogos ({jogos})")
-                continue
-
-            times['vitorias'] = vitorias
-            times['empates'] = empates
-            times['derrotas'] = derrotas
-            break
-
-        times['gols_marcados'] = int(input("Gols marcados: "))
-        times['gols_sofridos'] = int(input("Gols sofridos: "))
-        print()
-
-        tabela.append(times.copy())
-
-    brasileirao(tabela)
-    sleep(1)
-
-main()

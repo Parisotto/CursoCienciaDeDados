@@ -1,3 +1,4 @@
+from math import factorial
 from time import sleep
 from uteis.utilitarios import titulo
 
@@ -9,7 +10,22 @@ def fatorialRecursiva(n):
     else:
         return n * fatorialRecursiva(n - 1)
 
-# print(fatorialRecrusiva(5))
+# fatorialRecursiva(5)
+
+def fatorialRecursiva2(n):
+    if n == 0 or n == 1:
+        sleep(.5)
+        print("1 = ", end="")
+        return 1
+    else:
+        sleep(.5)
+        print(n, end=' x ')
+        return n * fatorialRecursiva(n - 1)
+
+f = 5
+#print(f"Calculando {f}! = ", end="")
+#sleep(.5)
+# print(fatorialRecursiva(5))
 
 def fatorial(numero):
     fat = numero

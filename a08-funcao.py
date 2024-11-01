@@ -50,9 +50,21 @@ print(valores)
 dobrar(valores)
 print(valores)
 
+# passando a variável por referencia
+# mudando conteúdo da variável
 def alterar(numero):
     numero = 5
 
 numero = 0
 alterar(numero)
 print(numero)
+
+# mudando variável global
+variavel_global = 7
+def muda_variavel():
+    global variavel_global
+    variavel_global = 9
+
+print(variavel_global)
+muda_variavel()
+print(variavel_global)

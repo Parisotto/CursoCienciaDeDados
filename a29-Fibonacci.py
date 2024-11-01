@@ -19,22 +19,33 @@ def fibonacci(termos):
 
 def main():
     titulo("SEQUÊNCIA DE FIBONACCI")
-    termos = int(input("Quantos termos?: "))
+    termos = input("Quantos termos?: ")
+    if termos.isnumeric():
+        termos = int(termos)
+
     print(f"{termos} termos: ", end="")
     fibonacci(termos)
     sleep(1)
     print("\nEncerrando.")
     sleep(1)
 
-# main()
-# help(titulo)
+#main()
+#help(titulo)
 
-def fiboRecursivo(n):
+def fiboRecursivo(n, c=0):
+    c += 1
+    print(f"[{c}]N={n}", end=' > ')
     if n == 1:
+        print(f"nA=0", end=f'>>P{c-1} >>> ')
         return 0
     elif n == 2:
+        print(f"nB=1", end=f'>>P{c-1} >>> ')
         return 1
     else:
-        return fiboRecursivo(n-1) + fiboRecursivo(n-2)
+        f1 = fiboRecursivo(n-1, c)
+        print(f"[{c}]f1={f1}", end=' > ')
+        f2 = fiboRecursivo(n-2, c)
+        print(f"[{c}]f2={f2}", end=' > ')
+        return f1 + f2
 
-print(fiboRecursivo(5))
+print(fiboRecursivo(4))
