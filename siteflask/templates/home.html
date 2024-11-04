@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+    {% block title %}{{ usuario }}{% endblock %}
+{% block content %}
+    <h1>Teste Python</h1>
+    <a href="{{ url_for('home') }}">HOME</a>
+{# a variável usuario, se existir, será mostrada entre as tags <h2></h2> #}
+{% if usuario %}
+    <h2>Professor: {{usuario | upper}}</h2>
+{% else %}
+    <h2>Sem usuário.</h2>
+{% endif %}
+{% endblock %}

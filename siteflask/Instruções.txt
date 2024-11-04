@@ -1,0 +1,6 @@
+# Entre na pasta do projeto: Exemplo: cd flask
+# Criar um ambiente virtual: py -3 -m venv venv
+# Ativar o ambiente virtual: venv\Scripts\Activate
+# Instalar o flask: pip install flask
+# No visual studio code: Flask run
+# No pycharm: botão play
