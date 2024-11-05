@@ -1,0 +1,26 @@
+[
+    {
+        "time": "Palmeiras",
+        "vitorias": 10,
+        "empates": 10,
+        "derrotas": 10,
+        "gols_marcados": 50,
+        "gols_sofridos": 20
+    },
+    {
+        "time": "Flamengo",
+        "vitorias": 10,
+        "empates": 10,
+        "derrotas": 10,
+        "gols_marcados": 50,
+        "gols_sofridos": 20
+    },
+    {
+        "time": "Corinthians",
+        "vitorias": 10,
+        "empates": 10,
+        "derrotas": 10,
+        "gols_marcados": 50,
+        "gols_sofridos": 20
+    }
+]

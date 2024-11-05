@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1e3e75d-553e-4140-96c2-a79d85a84a72" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CursoCienciaDeDados.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CursoCienciaDeDados.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teste.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/siteflask/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/siteflask/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +52,7 @@
       <recent name="D:\Documentos\Edson\CursoCienciaDeDados\flask\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Documentos\Edson\CursoCienciaDeDados\siteflask\templates" />
       <recent name="D:\Documentos\Edson\CursoCienciaDeDados\siteflask" />
       <recent name="D:\Documentos\Edson\CursoCienciaDeDados\siteflask\cienciadedados" />
       <recent name="D:\Documentos\Edson\CursoCienciaDeDados\flask" />
