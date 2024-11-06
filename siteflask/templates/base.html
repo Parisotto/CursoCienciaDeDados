@@ -1,165 +1,24 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br"> <!-- adicionar -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../static/img/favicon.png" type="image/x-icon">
+    <meta charset="UTF-8"> <!-- mudar -->
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="shortcut icon" href="../static/img/favicon.png" type="image/x-icon"><!-- adicionar -->
 
     <title>Site com Flask</title>
-    <style>
-        * {
-            margin: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background: #003 url("../static/img/bg.jpg") no-repeat fixed center center;
-            background-size:cover;
-            height: 100vh;
-        }
-        h1, h2, h3 {
-            color: white;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        }
-
-
-
-        h2 {
-            font-size: 25px;
-            font-weight: normal;
-            margin: 20px 0 0;
-        }
-
-        h3 {
-            font-weight: normal;
-            margin-top: 20px;
-            font-style: italic;
-        }
-
-
-        a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-        
-        #principal {
-            background-color: #003c;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            padding: 150px 40px 0;
-            position: fixed;
-            top: 0;
-            z-index: -1;
-        }
-
-        #principal h1 {
-            font-size: 70px;
-            margin-bottom: 70px;
-        }
-
-        main {
-            z-index: 10;
-            text-align: center;
-            width: 100%;
-            margin: 600px auto 0;
-        }
-
-        main > article {
-            width: 90%;
-            margin: 0 auto;
-            padding: 0px 20px 10px;
-
-            border: 15px solid white;
-            border-bottom: none;
-            border-radius: 20px 20px 0 0;
-
-            background-color: #000d;
-            color: white;
-        }
-
-        main > article h1 {
-            font-family: Georgia, Times, 'Times New Roman', serif;
-            font-style: italic;
-            margin-bottom: 50px;
-        }
-
-        main > article p {
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            font-size: 20px;
-            width: 80%;
-            margin: 30px auto;
-        }
-
-        main > article img {
-            width: 200px;
-            margin-top: -110px;
-            margin-bottom: 70px;
-            background-color: #fff7;
-            border-radius: 50%;
-        }
-
-        main > article span {
-            color: cyan;
-            font-style: italic;
-        }
-
-        main > section {
-            background-color: white;
-            padding: 50px 0;
-        }
-
-        main > section > article {
-            width: 30%;
-            display: inline-block;
-            border: 1px solid black;
-            color: darkblue;
-            padding: 20px 10px;
-            min-height: 200px;
-        }
-
-        main > section > article > h2 {
-            color: darkblue;
-            margin: 0;
-        }
-        
-
-        footer {
-            border-top: 1px solid black;
-            background-color: #003;
-            padding: 50px;
-            text-align: center;
-            color: white;
-
-            box-shadow: inset 0px 10px 20px #0009;
-        }
-
-        footer a {
-            font-weight: normal;
-        }
-
-        footer a:hover {
-            color: aqua;
-        }
-    </style>
 </head>
 <body>
     <header>
 
     </header>
-    <section id="principal">
+    <section id="destaque"> <!-- adicionar -->
         <h1>Curso Técnico de Ciência de Dados</h1>
         <h2>Escola Estadual Ângelo Mendes de Almeida</h2>
         <h2>Turma 2°B 2024</h2>
         <h3>Prof. Parisotto</h3>
     </section>
-    <main>
-        <article>
+    <main> <!-- continua daqui -->
+        <section id="apresenta">
             <img id="logo" src="../static/img/favicon.png" alt="Logo Ciência de dados">
 
             <h1>Desenvolvido com o micro-framework FLASK no Python</h1>
@@ -170,9 +29,9 @@
 
             <p>Neste curso, os alunos do <span>Curso Técnico em Ciência de Dados</span> da <span>E.E. Dr Ângelo Mendes de Almeida</span> aprenderam a criar este site, suas múltiplas páginas, a integração com um banco de dados e formulários de cadastro, login e contato usando o Flask em seu desenvolvimento e o consumo de APIs em Python no back-end.</p>
 
-            <p>Todo o projeto foi desenvolvido em sala de aula com a participação dos alunos onde cada um desenvolveu sua própria versão.</p>
-        </article>
-        <section>
+            <p>Todo o projeto foi desenvolvido em sala de aula com a participação dos alunos.</p>
+        </section>
+        <section id="caixas">
             <article>
                 <h2>Um</h2>
             </article>
