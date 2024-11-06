@@ -11,12 +11,12 @@ body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-#destaque { /* renomear */
+#destaque { 
     color: white;
     text-align: center;
     width: 100%;
-    height: 100%; /* adicionar */
-    padding: 10% 5% 0; /* mudar */
+    height: 100%; 
+    padding: 10% 5% 0; 
 
     position: fixed; /* adicionar */
     top: 0; /* adicionar */
@@ -25,12 +25,10 @@ body {
     background-color: #003a;
 }
 
-#destaque h1 {/* renomear */
-    font-size: 70px; /* mudar */
-    margin-bottom: 70px; /* mudar */
+#destaque h1 {
+    font-size: 70px; 
+    margin-bottom: 70px; 
 }
-
-/* continuar daqui */
 
 #destaque h2 {
     font-size: 25px;
@@ -60,7 +58,7 @@ a:hover {
 main {
     text-align: center;
     width: 100%;
-    margin: 45% auto 0;
+    margin: 45% auto 0; /* adicionar */#a
 }
 
 #apresenta {

@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1e3e75d-553e-4140-96c2-a79d85a84a72" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/siteflask/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/siteflask/templates/base.html" afterDir="false" />
-    </list>
+    <list default="true" id="f1e3e75d-553e-4140-96c2-a79d85a84a72" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
